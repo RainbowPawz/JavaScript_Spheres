@@ -1,0 +1,91 @@
+.ui-widget-content
+{
+    font-size:12px;
+    font-family: georgia;
+}
+
+/* trim space around info button */
+.ui-button-text-only .ui-button-text
+{
+    padding: 0px;
+    width:50px;
+    height:50px;
+    background-image: url('../images/builder.png') !important;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default
+{ border:none; }
+
+/* changing dialog close button */
+.ui-dialog-titlebar-close
+{
+    outline-width: 0px !important;
+    background-image: url('../images/icon-close-16.png') !important;
+    background-repeat:no-repeat !important;
+}
+
+/* changing dialog close button */
+.ui-dialog-titlebar-close:hover,
+.ui-dialog-titlebar-close:focus
+{
+
+}
+
+/* hide the default "x" close image */
+.ui-dialog-titlebar-close span
+{  display:none !important;  }
+
+/* translucent background */
+.ui-dialog
+{
+    opacity: 1;
+    width:600px !important;
+}
+
+.ui-dialog .ui-dialog .ui-dialog-content
+{
+    padding:0;
+    margin: 5px;
+    width:600px !important;
+
+}
+
+span.ui-button-text img
+{
+    border:none;
+    display:none;
+}
+
+div.cat_info
+{
+    width: 98%;
+    height: 125px;
+    padding: 10px 0 10px 10px;
+    margin-bottom: 5px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+
+}
+div.cat_text
+{
+    width:450px;
+    margin-left: auto;
+    padding: 35px 0 10px 10px;
+    font-size: 15px;
+}
+div.un_img
+{
+    background-image: url('../images/gold.png') !important;
+    width:100px;
+    height:100px;
+    float: left;
+    margin: 11px 0 5px 5px;
+}
+div.cat_img
+{
+    background-image: url('../images/balls.png') !important;
+    width:100px;
+    height:100px;
+    float: left;
+    margin: 11px 0 5px 5px;
+}
