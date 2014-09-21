@@ -1,2 +1,9 @@
-This project was built as a prototype to my Advanced Programming II course in my senior year. The intent was to create a room with randoming placed spheres that the end user could interact with. Pluse a side menu that would have several otions for interaction.
+This Project is a simple use of Javascript manipulation. Its initial purpose was to prototype a design for an Advanced Programming Project II in my senior year.
 
+Project information as of 9/18/2014:
+
+*Creates a room with multiple Spheres that are hardcoded to a set number of varing colors.
+*Placed randomly around the room.
+*Click interaction that highlights the sphere.
+
+Meny Menu used. All right belong to the fantastic man: https://github.com/hakimel/meny
