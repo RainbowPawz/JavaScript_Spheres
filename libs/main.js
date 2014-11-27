@@ -12,8 +12,8 @@ var mouse = new THREE.Vector2(),
 function createView() {
 
     init();
-    createSpheres(10);
-
+    createSpheres(14);
+    createMenu();
     animate();
 
 }
@@ -27,7 +27,6 @@ function init() {
 
     scene.add( new THREE.AmbientLight( 0x505050 ) );
 
-    //var light = new THREE.SpotLight( 0xffffff, 1.5 );
     light.position.set( 0, 500, 2000 );
     light.castShadow = true;
 
@@ -47,7 +46,7 @@ function init() {
 
     sprite = THREE.ImageUtils.loadTexture( "images/ball.png" );
 
-    for ( var i = 0, l = 750; i < l; i ++) {
+    for ( var i = 0, l = 1000; i < l; i ++) {
 
         var vertex = new THREE.Vector3();
 
@@ -71,13 +70,10 @@ function init() {
             vertex.y = vary;
             vertex.z = varz;
         }
-
-
             geometry.vertices.push( vertex );
 
             colors[ i ] = new THREE.Color();
             colors[ i ].setHSL( Math.random(), 1, 0.5 );
-
     }
 
     geometry.colors = colors;
@@ -93,8 +89,6 @@ function init() {
     scene.add( particles );
     scene.add( plane );
 
-
-
     projector = new THREE.Projector();
 
     renderer = new THREE.WebGLRenderer( { clearAlpha: 1  } );
@@ -105,16 +99,6 @@ function init() {
 
     renderer.shadowMapEnabled = true;
     renderer.shadowMapType = THREE.PCFShadowMap;
-
-    var menu_div = document.createElement("div");
-    menu_div.className = "menu_wrapper";
-    menu_div.innerHTML = '<div class="menu_box"><div class="menu_internal"><h4 class="title">Categories</h4><form><input type="search" id="search_field" /><select multiple id="cat_select"><option value="1">Category A</option><option value="2">Category B</option><option value="3">Category C</option><option value="4">Category D</option><option value="5">Category E</option></select></form></div><div class="menu_internal"><h4 class="title">Documents</h4><form><input type="search" id="search_field" /><select multiple id="doc_select"><option value="d1">Document A</option><option value="d2">Document B</option><option value="d3">Document C</option><option value="d4">Document D</option><option value="d5">Document E</option><option value="d6">Document F</option><option value="d7">Document G</option></select></form></div></div>';
-
-    
-    document.body.appendChild( menu_div )
-    //document.body.appendChild( menu_arrow );
-
-    document.body.appendChild( renderer.domElement );
 
     renderer.domElement.addEventListener( 'mousemove', onDocumentMouseMove, false );
     renderer.domElement.addEventListener( 'mousedown', onDocumentMouseDown, false );
@@ -128,7 +112,6 @@ function init() {
     controls.noPan = true;
     controls.staticMoving = true;
     controls.dynamicDampingFactor = 0.3;
-
 
     window.addEventListener( 'resize', onWindowResize, false );
 
@@ -271,12 +254,8 @@ function onDocumentMouseUp( event ) {
 
 }
 
-//
-
 function animate() {
-
     requestAnimationFrame( animate );
-
     render();
 }
 
@@ -288,19 +267,15 @@ function render() {
 
     if ( spritey ) spritey.lookAt( camera.position );
 
-
-    for ( i = 0; i < scene.children.length; i ++ ) {
-
+    for ( i = 0; i < scene.children.length; i ++ )
+    {
         var object = scene.children[ i ];
 
         if ( object instanceof THREE.ParticleSystem ) {
 
             object.rotation.y = time * ( i < 4 ? i + 1 : - ( i + 1 ) );
-
         }
-
     }
-
     renderer.render( scene, camera );
 
 }

@@ -7,13 +7,13 @@
     <link rel="stylesheet" type="text/css" href="libs/main.css">
     <link rel=stylesheet href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
     <link rel=stylesheet href="libs/info.css"/>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 </head>
 <body>
 
-
 <script src="libs/three.min.js"></script>
-
-
 
 <script src="libs/TrackballControls.js"></script>
 
@@ -21,16 +21,15 @@
 
 <script src="libs/tween.min.js"></script>
 
-<script src="libs/checkbox-field.js"></script>
-
 <script src="libs/main.js"></script>
 
 <script src="libs/sphere.js"></script>
+
 <script src="libs/background.js"></script>
 
-<script src="libs/meny.js"></script>
+<script src="libs/Menu_class.js"></script>
 
-<script src="libs/backbone-min.js"></script>
+<script src="libs/meny.js"></script>
 
 <script src="libs/underscore.js"></script>
 
@@ -40,25 +39,14 @@
 
 <script src="libs/CSS3DRenderer.js"></script>
 
-
-
-<div id="checkbox-template" style="display:none">
-    <div style="display:inline-block">
-        <input type="checkbox"
-               id="checkbox_@{{id}}" />
-        <label for="checkbox_@{{id}}">
-            @{{label}}
-        </label>
-    </div>
-</div>
-
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
 <script src="libs/info.js"></script>
+<div id="container"></div>
 <div id="infoButton">
     <div id="infoBox" title="Help">
-        <div class="cat_info"><div class="cat_img"></div><div class="cat_text">The many multi-colored Spheres you see will each be a category you have selected.</div> </div>
+        <div class="cat_info"><div class="cat_img"></div><div class="cat_text">The many multi-colored Spheres you see will each be a category you have selected.</div></div>
         <div class="cat_info"><div class="un_img"></div><div class="cat_text">The Gold Spheres you see are the unions associated with the categories.</div></div>
     </div>
 </div>
@@ -70,7 +58,10 @@
 <script >
     createView();
 </script>
+
+
 <div class="meny-arrow"></div>
+
 <div class="content">
 
 </div>
