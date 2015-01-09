@@ -44,22 +44,3 @@
     {
         document.getElementById("number_set_field").focus();
     }
-
-    /*
-     $(document).ready(function(){
-     $("#btn-phones").click(function(){
-     var PHONES = new Array("Sony","Samsung","HTC","Motorolla");
-     $("#dropdown").find('option').remove();
-     for(i=0; i < PHONES.length; i++){
-     $("#dropdown").append('<option value="'+PHONES[i]+'">'+PHONES[i]+'</option>');
-     }
-     });
-     $("#btn-cars").click(function(){
-     var CARS = new Array("Ford","Honda","Toyota","Suzuki");
-     $("#dropdown").find('option').remove();
-     for(i=0; i < CARS .length; i++){
-     $("#dropdown").append('<option value="'+CARS [i]+'">'+CARS [i]+'</option>');
-     }
-     });
-     });
-     */
