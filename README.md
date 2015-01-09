@@ -1,5 +1,5 @@
 
-#JavaScript_Spheres
+# JavaScript_Spheres
 
 This Project is a simple use of Javascript manipulation. Its initial purpose was to prototype a design for an Advanced Programming Project II in my senior year.
 
